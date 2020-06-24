@@ -52,7 +52,7 @@ window.addEventListener("load", function () {
     var sid = Number(getParameterByName("sid"))
     
     var reviewForm = new Vue({
-        el: ".review-form",
+        el: "#rvf-wrap",
         data: {
             isActive: false
         },
