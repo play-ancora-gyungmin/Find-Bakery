@@ -1,0 +1,155 @@
+@charset 'utf-8';
+/*core.css*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: #2f2f2f;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+ul::after,
+ol::after,
+.cbl::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+li {
+    float: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.ir {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999%;
+    font-size: 1px;
+}
+
+@font-face {
+    font-family: 'NBG';
+    src: url('../resorces/font/NanumBarunGothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BMJ';
+    src: url('../resorces/font/BMJUA.ttf') format('truetype');
+}
+
+html,
+body {
+    font-size: 100px;
+    font-family: 'NBG',sans-serif;
+    color: #2f2f2f
+}

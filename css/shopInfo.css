@@ -1,0 +1,206 @@
+@charset 'utf-8';
+/*main.css*/
+
+@import url(./core.css);
+@import url(./common.css);
+
+.shop-top {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background-image: url("../resorces/img/dummy1.jpg");*/
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px hsla(210, 6%, 33%, 0.45);
+    background-repeat: no-repeat;
+}
+
+#shop-head {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.title_msg {
+    float: none;
+}
+
+#shop-title {
+    margin-bottom: .1rem;
+    color: #f2f2f2;
+    font-size: .57rem;
+    font-family: "BMJ";
+}
+
+#shop-msg {
+    color: #f2f2f2;
+    font-size: .21rem;
+    font-family: "NBG"
+}
+
+.like_review {
+    position: absolute;
+    right: 0;
+}
+
+.like_review a {
+    display: block;
+    float: left;
+    margin: 0 10px;
+    width: 83px;
+    height: 83px;
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#like-btn{
+    background-image: url(../resorces/img/btn-like.png);
+}
+
+#review-btn{
+    background-image: url(../resorces/img/btn-review.png);
+}
+
+#like-btn:hover{
+    background-image: url(../resorces/img/btn-like-on.png);
+}
+
+#review-btn:hover{
+    background-image: url(../resorces/img/btn-review-on.png);
+}
+
+#shop-summbox {
+    margin-top: .25rem;
+    font-size: .20rem;
+    color: #707070;
+}
+
+#shop-summbox li {
+    float: none;
+    margin-top: .20rem;
+}
+
+#shop-summbox li h4 {
+    float: left;
+    margin-left: 32px;
+    width: 1.2rem;
+}
+
+/*페이지 버튼*/
+#page-section-btn {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 50px;
+    font-size: .20rem;
+    line-height: 50px;
+    text-align: center;
+}
+
+#page-section-btn li {
+    width: calc( 100% / 3);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#page-section-btn li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#page-section-btn li:hover {
+    background-color: #f2f2f2;
+}
+
+#page-section-btn li:first-child {
+    border-right: 2px solid #f2f2f2;
+    border-radius: 7px 0 0 7px;
+}
+
+#page-section-btn li:last-child {
+    border-left: 2px solid #f2f2f2;
+    border-radius: 0 7px 7px 0;
+}
+
+/*리스트 아이템*/
+.itembox {
+    width: 285px;
+}
+
+.item-cont h3{
+    font-size: .16rem;
+}
+
+#shop-review {
+    height: 330px;
+}
+
+#review-box .itembox {
+    height: 220px;
+}
+
+#review-box .item-titlebox{
+    margin-bottom: 30px;
+}
+
+#review-box .item-cont h3{
+    float: left;
+    line-height: .28rem;
+    margin-bottom: auto;
+    vertical-align: text-bottom;
+}
+
+#review-box .item-cont h4 {
+    text-align: right;
+    font-size: .14rem;
+    color: #E7660B;
+}
+
+#review-box .item-cont h4 b {
+    font-size: .28rem;
+}
+
+#review-box .item-cont p {
+    float: none;
+}
+
+#mapbox {
+    width: 50%;
+    height: 350px;
+    float: left;
+    margin-right: 2%;
+}
+
+#transitbox {
+    float: left;
+    font-size: .20rem;
+}
+
+#transitbox h3 {
+    font-size: .26rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#transitbox h4 {
+    float: left;
+    margin-left: 15px;
+    width: .7rem;
+}
+
+#transitbox ul {
+    float: left;
+    color: #707070;
+    margin-bottom: 20px;
+}
+
+#transitbox ul li {
+    float: none;
+    margin-top: .20rem;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <title>오리크림빵</title>
+    <link rel="stylesheet" href="./css/shopInfo.css">
+    <!--<script src="js/vue.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/vue.v-drag.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
+    <script src="js/read.js"></script>
+    <script src="js/makeWidth.js"></script>
+    <script src="js/shopInfo.js"></script>
+</head>
+
+<body>
+    <header id="top">
+        <nav id="gnb" class='gnb content'>
+            <h1 id='gnb-logo' class="logo">
+                <a href="./index.htm">
+                    <img src="./resorces/img/Logo.png" alt="오리크림빵 로고">
+                    <span>오리크림빵</span>
+                </a>
+            </h1>
+            <ul class="gnb-list">
+                <li><a href="#">빵집</a></li>
+                <li><a href="#">디저트</a></li>
+                <li><a href="#">지역</a></li>
+                <li>
+                    <div class="gnb-search">
+                        <input id="gnb-search" type="text" placeholder="여기에 지역 또는 가게를 입력">
+                        <a href="#"><img src="./resorces/img/Icons%20-%20Search@2x.png" alt="검색"></a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sign-list">
+                <li class="btn-signIn"><a href="#">로그인</a></li>
+                <li class="btn-signUp"><a href="#">회원가입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="shopInfo">
+            <section class="banner">
+                <div class="shop-top" id="shop-top" :style="{ backgroundImage: 'url(./resorces/img/' + findedData.img + ')' }">
+                    <span class="ir">{{ findedData.title }} 전경 이미지</span>
+                    <div id="shop-head">
+                        <div class="title_msg">
+                            <h2 id="shop-title">{{ findedData.title }}</h2>
+                            <p id="shop-msg">{{ findedData.msg }}</p>
+                        </div>
+                        <div class="like_review">
+                            <a href="#" id="like-btn" class="ir">단골 등록 버튼</a>
+                            <a href="#" id="review-btn" class="ir">리뷰 작성 버튼</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box content" id="shop-summ">
+                <div class="section-topbox">
+                    <h2 class="section-title">개요</h2>
+                </div>
+                <ul id="shop-summbox">
+                    <li>
+                        <h4>주소</h4><span>{{ findedData.address }}</span>
+                    </li>
+                    <li>
+                        <h4>전화번호</h4><span>{{ findedData.tel }}</span>
+                    </li>
+                    <li>
+                        <h4>종류</h4>
+                        <span v-if="findedData.sort === 0">
+                            빵집
+                        </span>
+                        <span v-else-if="findedData.sort === 1">
+                            디저트
+                        </span>
+                    </li>
+                    <li>
+                        <h4>가격대</h4><span>{{ findedData.price }}원 대</span>
+                    </li>
+                    <li>
+                        <h4>주차</h4><span>{{ findedData.parking }}</span>
+                    </li>
+                    <li>
+                        <h4>영업시간</h4><span>{{ findedData.opentime }} - {{ findedData.closetime }}</span>
+                    </li>
+                    <li>
+                        <h4>휴일</h4><span>{{ findedData.closeday }}</span>
+                    </li>
+                </ul>
+                <ul id="page-section-btn">
+                    <li><a href="#shop-menu">메뉴</a></li>
+                    <li><a href="#shop-review">방문자 리뷰</a></li>
+                    <li><a href="#shop-map">지도</a></li>
+                </ul>
+            </section>
+        </div>
+        <section class="section-box content" id="shop-menu">
+            <div class="section-topbox">
+                <h2 class="section-title">메뉴</h2>
+            </div>
+            <div class="section-mainbox">
+                <ul class="section-mainlist menu-box" id="menu-box" :style="{ width: thatWidth + 'px' }">
+                    <li class="itembox theme" v-for="item in findedData.menu" :key="item.mid">
+                        <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                            <span class="ir">{{ item.name }}</span>
+                        </div>
+                        <div class="item-cont">
+                            <h3>{{ item.name }}</h3>
+                            <p>{{ item.msg }}</p>
+                            <span>₩{{ item.price }}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-box content" id="shop-review">
+            <div class="section-topbox">
+                <h2 class="section-title">방문자 리뷰</h2>
+            </div>
+            <div class="section-mainbox">
+                <ul class="section-mainlist review-box" id="review-box" :style="{ width: thatWidth + 'px' }">
+                    <li class="itembox theme" v-for="item in findedData.review" :key="item.rid">
+                        <div class="item-cont">
+                            <div class="item-titlebox">
+                                <h3>@{{ item.user }}</h3>
+                                <h4><b>{{ item.score }}</b>점</h4>
+                            </div>
+                            <p>{{ item.comment }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-box content" id="shop-map">
+            <div class="section-topbox">
+                <h2 class="section-title">지도</h2>
+            </div>
+            <div class="section-mainbox">
+                <div id="mapbox" class="ir">
+                    지도 {{ findedData.address }}
+                </div>
+                <div id="transitbox">
+                    <h3>대중교통</h3>
+                    <h4>버스</h4>
+                    <ul id="busList">
+                        <li v-for="item in findedData.transit.bus">{{ item }}</li>
+                    </ul><br>
+                    <h4>지하철</h4>
+                    <ul id="metroList">
+                        <li v-for="item in findedData.transit.metro">{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="review-form">
+            <form action="reviewPost.php">
+                
+            </form>
+        </div>
+    </main>
+    <footer id='info'>
+        <section class="info-top content">
+            <div id="info-logo" class="logo">
+                <img src="./resorces/img/Logo.png" alt="오리크림빵 로고">
+                <span>오리크림빵</span>
+            </div>
+            <ul class="info-list">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">가게지원센터</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+            <div class="sns-list">
+                <h4>지금 팔로우</h4>
+                <ul>
+                    <li class="sns-fb"><a href="#" class='ir'>페이스북</a></li>
+                    <li class="sns-in"><a href="#" class='ir'>인스타그램</a></li>
+                    <li class="sns-tw"><a href="#" class='ir'>트위터</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="info-bottom content">
+            <span>(C)2020. 오리크림빵</span>
+        </section>
+    </footer>
+</body></html>
