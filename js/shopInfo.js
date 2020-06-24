@@ -24,14 +24,6 @@ function createMap(x, y) {
         zoomControlOptions: { //줌 컨트롤의 옵션
             position: naver.maps.Position.TOP_RIGHT
         },
-        draggable: false,
-        pinchZoom: false,
-        scrollWheel: false,
-        keyboardShortcuts: false,
-        disableDoubleTapZoom: true,
-        disableDoubleClickZoom: true,
-        disableTwoFingerTapZoom: true
-
     });
     var marker = new naver.maps.Marker({
         position: new naver.maps.LatLng(y, x),
@@ -57,18 +49,47 @@ function findMapPoints(addr) {
 
 /*-----load-----*/
 window.addEventListener("load", function () {
-    var sid = Number(getParameterByName("sid"));
+    var sid = Number(getParameterByName("sid"))
+    
+    var reviewForm = new Vue({
+        el: ".review-form",
+        data: {
+            isActive: false
+        },
+        methods: {
+            closeForm: function (event) {
+                if(event) event.preventDefault()
+                this.$data.isActive = false
+            }
+        }
+    })
 
     var shopInfoLoad = new Vue({
         el: '#shopInfo',
         data: {
             thatData: shopData,
+            isLike: false
         },
         computed: {
             findedData: function () {
                 return findData(this, sid)
             }
         },
+        methods: {
+            likeShop: function (event) {
+                if(event) event.preventDefault()
+                this.$data.isLike = !this.$data.isLike
+                if(this.$data.isLike) {
+                    alert("단골 목록에 추가되었습니다.")
+                }else {
+                    alert("단골 목록에 삭제되었습니다.")
+                }
+            },
+            reviewShop: function (event) {
+                if(event) event.preventDefault()
+                reviewForm.$data.isActive = true
+            }
+        }
     })
 
     var menuListLoad = new Vue({
@@ -118,7 +139,6 @@ window.addEventListener("load", function () {
             }
         },
     })
-
 
     /*---mapLoad---*/
     /*좌표찾기*/

@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./css/shopInfo.css">
     <!--<script src="js/vue.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/vue.v-drag.js"></script>
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
     <script src="js/read.js"></script>
     <script src="js/makeWidth.js"></script>
@@ -44,6 +41,7 @@
         </nav>
     </header>
     <main id="main">
+        <!--정보 전달 박스-->
         <div id="shopInfo">
             <section class="banner">
                 <div class="shop-top" id="shop-top" :style="{ backgroundImage: 'url(./resorces/img/' + findedData.img + ')' }">
@@ -54,8 +52,8 @@
                             <p id="shop-msg">{{ findedData.msg }}</p>
                         </div>
                         <div class="like_review">
-                            <a href="#" id="like-btn" class="ir">단골 등록 버튼</a>
-                            <a href="#" id="review-btn" class="ir">리뷰 작성 버튼</a>
+                            <a href="#" id="like-btn" :class="{ on: isLike }" class="ir" v-on:click="likeShop">단골 등록 버튼</a>
+                            <a href="#" id="review-btn" class="ir" v-on:click="reviewShop">리뷰 작성 버튼</a>
                         </div>
                     </div>
                 </div>
@@ -100,6 +98,7 @@
                 </ul>
             </section>
         </div>
+        <!--메뉴 영역-->
         <section class="section-box content" id="shop-menu">
             <div class="section-topbox">
                 <h2 class="section-title">메뉴</h2>
@@ -119,6 +118,7 @@
                 </ul>
             </div>
         </section>
+        <!--리뷰 영역-->
         <section class="section-box content" id="shop-review">
             <div class="section-topbox">
                 <h2 class="section-title">방문자 리뷰</h2>
@@ -137,6 +137,7 @@
                 </ul>
             </div>
         </section>
+        <!--지도 영역-->
         <section class="section-box content" id="shop-map">
             <div class="section-topbox">
                 <h2 class="section-title">지도</h2>
@@ -158,11 +159,6 @@
                 </div>
             </div>
         </section>
-        <div class="review-form">
-            <form action="reviewPost.php">
-                
-            </form>
-        </div>
     </main>
     <footer id='info'>
         <section class="info-top content">
@@ -191,4 +187,36 @@
             <span>(C)2020. 오리크림빵</span>
         </section>
     </footer>
+    <!--리뷰 업로드 폼-->
+    <div class="review-form" :class="{ on: isActive }">
+        <form action="reviewPost.php" id="review-form">
+            <a href="#" id="close-rvf" v-on:click="closeForm">x</a>
+            <div class="reviewTopBox">
+                <h3 class="user-name">@율</h3>
+                <div class="reviewScoreInput">
+                    <label for="reviewScoreInput">점수</label>
+                    <select name="review-score" id="reviewScoreInput">
+                        <option value="">점수</option>
+                        <option value="1">1점</option>
+                        <option value="2">2점</option>
+                        <option value="3">3점</option>
+                        <option value="4">4점</option>
+                        <option value="5">5점</option>
+                        <option value="6">6점</option>
+                        <option value="7">7점</option>
+                        <option value="8">8점</option>
+                        <option value="9">9점</option>
+                        <option value="10">10점</option>
+                    </select>
+                </div>
+            </div>
+            <div class="reviewBottomBox">
+                <div class="reviewTextInput">
+                    <label for="reviewTextInput">리뷰</label>
+                    <textarea form="review-form" id="reviewTextInput"></textarea>
+                </div>
+                <input type="submit" id="review-submit" value="등록">
+            </div>
+        </form>
+    </div>
 </body></html>
