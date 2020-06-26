@@ -188,39 +188,35 @@
         </section>
     </footer>
     <!--리뷰 업로드 폼-->
-    <div id="rvf-wrap">
-        <transition name="fade">
-            <div class="review-form" v-show="isActive">
-                <form action="reviewPost.php" id="review-form">
-                    <a href="#" id="close-rvf" v-on:click="closeForm">x</a>
-                    <div class="reviewTopBox">
-                        <h3 class="user-name">@율</h3>
-                        <div class="reviewScoreInput">
-                            <label for="reviewScoreInput">점수</label>
-                            <select name="review-score" id="reviewScoreInput">
-                                <option value="">점수</option>
-                                <option value="1">1점</option>
-                                <option value="2">2점</option>
-                                <option value="3">3점</option>
-                                <option value="4">4점</option>
-                                <option value="5">5점</option>
-                                <option value="6">6점</option>
-                                <option value="7">7점</option>
-                                <option value="8">8점</option>
-                                <option value="9">9점</option>
-                                <option value="10">10점</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="reviewBottomBox">
-                        <div class="reviewTextInput">
-                            <label for="reviewTextInput">리뷰</label>
-                            <textarea form="review-form" id="reviewTextInput"></textarea>
-                        </div>
-                        <input type="submit" id="review-submit" value="등록">
-                    </div>
-                </form>
+    <div class="review-form" :class="{ on: isActive }">
+        <form action="reviewPost.php" id="review-form">
+            <a href="#" id="close-rvf" v-on:click="closeForm">x</a>
+            <div class="reviewTopBox">
+                <h3 class="user-name">@율</h3>
+                <div class="reviewScoreInput">
+                    <label for="reviewScoreInput">점수</label>
+                    <select name="review-score" id="reviewScoreInput">
+                        <option value="">점수</option>
+                        <option value="1">1점</option>
+                        <option value="2">2점</option>
+                        <option value="3">3점</option>
+                        <option value="4">4점</option>
+                        <option value="5">5점</option>
+                        <option value="6">6점</option>
+                        <option value="7">7점</option>
+                        <option value="8">8점</option>
+                        <option value="9">9점</option>
+                        <option value="10">10점</option>
+                    </select>
+                </div>
             </div>
-        </transition>
+            <div class="reviewBottomBox">
+                <div class="reviewTextInput">
+                    <label for="reviewTextInput">리뷰</label>
+                    <textarea form="review-form" id="reviewTextInput"></textarea>
+                </div>
+                <input type="submit" id="review-submit" value="등록">
+            </div>
+        </form>
     </div>
 </body></html>

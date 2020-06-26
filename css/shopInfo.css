@@ -78,9 +78,9 @@
     background-image: url(../resorces/img/btn-like-on.png);
 }
 
-/*#review-btn.on {
+#review-btn.on {
     background-image: url(../resorces/img/btn-review-on.png);
-}*/
+}
 
 #shop-summbox {
     margin-top: .25rem;
@@ -221,16 +221,14 @@
     left: 0;
     z-index: 999;
     background-color: rgba(255, 255, 240, 0.5);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .5s;
-}
-
-.fade-enter,
-.fade-leave-to {
+    display: none;
     opacity: 0;
+    transition: .3s;
+}
+
+.review-form.on {
+    display: block;
+    opacity: 1;
 }
 
 #review-form {
@@ -241,7 +239,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 7px
 }
 
 #review-form label {
@@ -283,8 +281,6 @@
     border: 2px solid #E7660B;
     border-radius: 7px;
     background-color: #FFFFF0;
-    font-family: "NBG";
-    font-size: .14rem;
 }
 
 #reviewScoreInput:focus {
@@ -313,8 +309,6 @@
     background-color: #FFFFF0;
     padding: 5px;
     box-sizing: border-box;
-    font-family: "NBG";
-    font-size: .14rem;
 }
 
 #reviewTextInput:focus {
