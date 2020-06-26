@@ -9,36 +9,15 @@
     <!--<script src="js/vue.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
+    <script src="js/component.js"></script>
     <script src="js/read.js"></script>
-    <script src="js/makeWidth.js"></script>
+    <script src="js/calc-width.js"></script>
     <script src="js/shopInfo.js"></script>
 </head>
 
 <body>
     <header id="top">
-        <nav id="gnb" class='gnb content'>
-            <h1 id='gnb-logo' class="logo">
-                <a href="./index.htm">
-                    <img src="./resorces/img/Logo.png" alt="오리크림빵 로고">
-                    <span>오리크림빵</span>
-                </a>
-            </h1>
-            <ul class="gnb-list">
-                <li><a href="#">빵집</a></li>
-                <li><a href="#">디저트</a></li>
-                <li><a href="#">지역</a></li>
-                <li>
-                    <div class="gnb-search">
-                        <input id="gnb-search" type="text" placeholder="여기에 지역 또는 가게를 입력">
-                        <a href="#"><img src="./resorces/img/Icons%20-%20Search@2x.png" alt="검색"></a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="sign-list">
-                <li class="btn-signIn"><a href="#">로그인</a></li>
-                <li class="btn-signUp"><a href="#">회원가입</a></li>
-            </ul>
-        </nav>
+        <page-header></page-header>
     </header>
     <main id="main">
         <!--정보 전달 박스-->
@@ -161,31 +140,7 @@
         </section>
     </main>
     <footer id='info'>
-        <section class="info-top content">
-            <div id="info-logo" class="logo">
-                <img src="./resorces/img/Logo.png" alt="오리크림빵 로고">
-                <span>오리크림빵</span>
-            </div>
-            <ul class="info-list">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">가게지원센터</a></li>
-                <li><a href="#">고객센터</a></li>
-            </ul>
-            <div class="sns-list">
-                <h4>지금 팔로우</h4>
-                <ul>
-                    <li class="sns-fb"><a href="#" class='ir'>페이스북</a></li>
-                    <li class="sns-in"><a href="#" class='ir'>인스타그램</a></li>
-                    <li class="sns-tw"><a href="#" class='ir'>트위터</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="info-bottom content">
-            <span>(C)2020. 오리크림빵</span>
-        </section>
+        <page-footer></page-footer>
     </footer>
     <!--리뷰 업로드 폼-->
     <div id="rvf-wrap">
