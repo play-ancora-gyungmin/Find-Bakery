@@ -6,6 +6,10 @@ body {
     overflow-x: hidden;
 }
 
+.clearfix {*zoom:1;}
+.clearfix:before, .clearfix:after {display:block; content: ''; line-height: 0;}
+.clearfix:after {clear: both;}
+
 .content {
     width: 90%;
     margin: 0 auto;
@@ -112,6 +116,7 @@ body {
 }
 
 .item-img {
+    position: relative;
     width: 100%;
     height: 50%;
     border-radius: 7px 7px 0 0;
@@ -122,6 +127,7 @@ body {
 }
 
 .item-img a {
+    position: absolute;
     display: block;
     width: 100%;
     height: 100%;
@@ -129,12 +135,19 @@ body {
 
 .item-cont {
     position: relative;
-    width: 80%;
     height: 50%;
-    margin: 0 auto;
+    padding: 0 36px;
     padding-top: 34px;
     padding-bottom: 40px;
     box-sizing: border-box;
+}
+
+.shop-box .item-img {
+    height: 60%;
+}
+
+.shop-box .item-cont {
+    height: 40%;
 }
 
 .item-cont h3 {
@@ -167,6 +180,7 @@ body {
     height: 160px;
     background-color: #FCE364;
     box-sizing: border-box;
+    z-index: 999;
 }
 
 #gnb {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <title>오리크림빵</title>
+    <link rel="stylesheet" href="./css/listUp.css">
+    <!--<script src="js/vue.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
+    <script src="js/component.js"></script>
+    <script src="js/read.js"></script>
+    <script src="js/calcSize.js"></script>
+    <script src="js/listUp.js"></script>
+</head>
+
+<body>
+    <header id="top">
+        <page-header></page-header>
+    </header>
+    <main id="main">
+        <div id="pageTitle" class="content">
+            <!--<h2>빵집 목록</h2>
+            <h2>디저트 가게 목록</h2>
+            <h2>지역</h2>-->
+            <h2>검색결과</h2>
+        </div>
+        <section id="rankingBox" class="content">
+            <div class="section-topbox">
+                <h2 class="section-title">추천 가게</h2>
+            </div>
+            <div class="ranking-list shop-box clearfix">
+                <div id="rank-1" class="itembox rankItem">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                        <img src="./resorces/img/badge-1st.png" alt="1등 뱃지">
+                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}
+                        </a>
+                    </div>
+                    <div class="item-cont">
+                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
+                        <p>{{ item.msg }}</p>
+                    </div>
+                </div>
+                <div id="rank-2" class="itembox rankItem">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                        <img src="./resorces/img/badge-2nd.png" alt="2등 뱃지">
+                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                    </div>
+                    <div class="item-cont">
+                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
+                        <p>{{ item.msg }}</p>
+                    </div>
+                </div>
+                <div id="rank-3" class="itembox rankItem">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                        <img src="./resorces/img/badge-3rd.png" alt="3등 뱃지">
+                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                    </div>
+                    <div class="item-cont">
+                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
+                        <p>{{ item.msg }}</p>
+                    </div>
+                </div>
+                <div id="rank-4" class="itembox rankItem">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                        <img src="./resorces/img/badge-4th.png" alt="4등 뱃지">
+                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                    </div>
+                    <div class="item-cont">
+                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
+                        <p>{{ item.msg }}</p>
+                    </div>
+                </div>
+                <div id="rank-5" class="itembox rankItem">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                        <img src="./resorces/img/badge-5th.png" alt="5등 뱃지">
+                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                    </div>
+                    <div class="item-cont">
+                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
+                        <p>{{ item.msg }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="shopListBox" class="content">
+            <ul id="shopList" class="section-mainlist shop-box">
+                <li class="itembox" v-for="item in thatData" :key="item.id">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                        <a class="ir" href="#">{{ item.title }}</a>
+                    </div>
+                    <div class="item-cont">
+                        <h3><a href="#">{{ item.title }}</a></h3>
+                        <p>{{ item.msg }}</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer id='info'>
+        <page-footer></page-footer>
+    </footer>
+</body></html>

@@ -37,7 +37,7 @@ function bannerIntro(dirValue,bulitSeq) {
 window.addEventListener("load", function () {
     console.log("loaded")
     /*------Main View------*/
-    var themeListLoad = new Vue({
+    /*var themeListLoad = new Vue({
         el: '#theme-box',
         data: {
             thatData: themeData,
@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
                 this.thatWidth = makeWidth(this)
             })
         }
-    })
+    })*/
 
     var localListLoad = new Vue({
         el: '#local-box',

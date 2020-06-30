@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/component.js"></script>
     <script src="js/read.js"></script>
-    <script src="js/calc-width.js"></script>
+    <script src="js/calcSize.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -23,14 +23,14 @@
                 <li v-for="item in thatData" :key="item.id" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }"><a href="#">{{ item.title }}</a></li>
             </ul>
             <ul id="main-banner-bulit">
-                <li v-for="index in thatData" ref="bulitItem"><a href="#" class="ir">{{ index }}</a></li>
+                <li v-for="item in thatData" ref="bulitItem"><a href="#" class="ir">{{ item.id }}</a></li>
             </ul>
             <div class="arow-list baner-arow">
                 <a class="prev arow baner-btn" href="#">&lt;</a>
                 <a class="next arow baner-btn" href="#">&gt;</a>
             </div>
         </section>
-        <section class="section-box list-theme content">
+        <!--<section class="section-box list-theme content">
             <div class="section-topbox">
                 <h2 class="section-title">테마</h2>
             </div>
@@ -48,14 +48,14 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>-->
         <section class="section-box list-local content">
             <div class="section-topbox">
                 <h2 class="section-title">지역</h2>
             </div>
             <div class="section-mainbox">
                 <ul class="section-mainlist local-box" id="local-box" :style="{ width: thatWidth + 'px' }">
-                    <li class="itembox theme" v-for="item in thatData" :key="item.id">
+                    <li class="itembox" v-for="item in thatData" :key="item.id">
                         <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
                             <a class="ir" href="#">{{ item.wide }} {{ item.basic }}</a>
                         </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="section-mainbox">
                 <ul class="section-mainlist shop-box" id="shop-box-bakery" :style="{ width: thatWidth + 'px' }">
-                    <li class="itembox theme" v-for="item in filteredData" :key="item.id">
+                    <li class="itembox" v-for="item in filteredData" :key="item.id">
                         <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
                             <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
                         </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="section-mainbox">
                 <ul class="section-mainlist shop-box" id="shop-box-dessert" :style="{ width: thatWidth + 'px' }">
-                    <li class="itembox theme" v-for="item in filteredData" :key="item.id">
+                    <li class="itembox" v-for="item in filteredData" :key="item.id">
                         <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
                             <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
                         </div>
