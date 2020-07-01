@@ -2,7 +2,8 @@ var shopData = [
     {
         id: 0,
         title: "무지빵",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 종로구 ",
+        local: "종로",
         tel: "02-739-5520",
         sort: 0,
         price: "10000",
@@ -12,7 +13,6 @@ var shopData = [
         closeday: "일,첫째 월",
         msg: "매일 아침 7시, 오후 1시 새로운 빵이 나옵니다",
         img: "dummy1.jpg",
-        
         transit: {
             bus: [
                 "오리역 60 101 300 370"
@@ -25,7 +25,8 @@ var shopData = [
 }, {
         id: 1,
         title: "무지마카롱",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 중구 ",
+        local: "중",
         tel: "02-739-5520",
         sort: 1,
         price: "10000",
@@ -34,8 +35,7 @@ var shopData = [
         closetime: "21:00",
         closeday: "일,첫째 월",
         msg: "정통 방식으로 만드는 마카롱 전문점 입니다.",
-        img: "dummy2.jpg",
-        
+        img: "dummy2.jpg",        
         transit: {
             bus: [
                 "오리역 60 101 300 370"
@@ -48,7 +48,8 @@ var shopData = [
 }, {
         id: 2,
         title: "오리오리빵",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 용산구 ",
+        local: "용산",
         tel: "02-739-5520",
         sort: 0,
         price: "10000",
@@ -58,7 +59,6 @@ var shopData = [
         closeday: "일,첫째 월",
         msg: "오리역 인근 빵집 입니다.",
         img: "dummy3.jpg",
-
         transit: {
             bus: [
                 "오리역 60 101 300 370"
@@ -71,7 +71,8 @@ var shopData = [
 }, {
         id: 3,
         title: "아우내 호두과자 종로점",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 종로구 ",
+        local: "종로",
         tel: "02-739-5520",
         sort: 1,
         price: "10000",
@@ -80,8 +81,7 @@ var shopData = [
         closetime: "21:00",
         closeday: "일,첫째 월",
         msg: "종로로 찾아온 호두과자",
-        img: "dummy4.jpg",
-        
+        img: "dummy4.jpg",        
         transit: {
             bus: [
                 "오리역 60 101 300 370"
@@ -94,7 +94,8 @@ var shopData = [
 }, {
         id: 4,
         title: "너구리 카페",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 서대문구 ",
+        local: "서대문",
         tel: "02-739-5520",
         sort: 0,
         price: "10000",
@@ -116,7 +117,8 @@ var shopData = [
 }, {
         id: 5,
         title: "율찰떡",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 마포구 ",
+        local: "마포",
         tel: "02-739-5520",
         sort: 1,
         price: "10000",
@@ -138,7 +140,8 @@ var shopData = [
 }, {
         id: 6,
         title: "댕댕바게트",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 마포구",
+        local: "마포",
         tel: "02-739-5520",
         sort: 0,
         price: "10000",
@@ -160,7 +163,8 @@ var shopData = [
 }, {
         id: 7,
         title: "카페로즈",
-        address: "서울특별시 종로구 사직로8길 42 1F",
+        address: "서울특별시 서대문구 ",
+        local: "서대문",
         tel: "02-739-5520",
         sort: 1,
         price: "10000",
@@ -916,21 +920,23 @@ var themeData = [{
     sellist: [
         {
             shop: shopData.find(x => x.id === 0),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 빵을 굽습니다. 대표메뉴는 바게트 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 빵을 굽습니다. \n대표메뉴는 바게트 입니다."
         },
         {
             shop: shopData.find(x => x.id === 2),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 빵을 굽습니다. 대표메뉴는 바게트 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 빵을 굽습니다.\n 대표메뉴는 바게트 입니다."
         },
         {
             shop: shopData.find(x => x.id === 4),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 빵을 굽습니다. 대표메뉴는 바게트 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 빵을 굽습니다.\n 대표메뉴는 바게트 입니다."
         },
         {
             shop: shopData.find(x => x.id === 6),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 빵을 굽습니다. 대표메뉴는 바게트 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 빵을 굽습니다.\n 대표메뉴는 바게트 입니다."
         },
-    ]
+    ],
+    written: "최사장",
+    reportingdate: "2020.06.08"
 }, {
     id: 1,
     title: "마카롱 전문",
@@ -940,22 +946,23 @@ var themeData = [{
     sellist: [
         {
             shop: shopData.find(x => x.id === 1),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 3),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 5),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 7),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
-    ]
-
+    ],
+    written: "최사장",
+    reportingdate: "2020.06.08"
 }, {
     id: 2,
     title: "우리나라 디저트",
@@ -965,21 +972,23 @@ var themeData = [{
     sellist: [
         {
             shop: shopData.find(x => x.id === 1),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 3),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 5),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 7),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
-    ]
+    ],
+    written: "최사장",
+    reportingdate: "2020.06.08"
 }, {
     id: 3,
     title: "여행지 디저트",
@@ -989,45 +998,51 @@ var themeData = [{
     sellist: [
         {
             shop: shopData.find(x => x.id === 1),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 3),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 5),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
         {
             shop: shopData.find(x => x.id === 7),
-            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다. 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다. 대표메뉴는 마카롱 입니다."
+            shopmsg: "오리역 인근에 위치한 가게로 오전 7시에 문을 엽니다.\n 매일 오전 7 시 오후 12 시 새로운 디저트가 나옵니다.\n 대표메뉴는 마카롱 입니다."
         },
-    ]
+    ],
+    written: "최사장",
+    reportingdate: "2020.06.08"
 }, ]
 
-var localData = [{
+var localData = [/*{
     id: 0,
     wide: "현재위치",
     basic: "",
+    src: "now",
     msg: "주변의 좋은 가게를 소개합니다.",
     img: "main_location_now.jpg"
-}, {
+}, */{
     id: 1,
     wide: "서울",
     basic: "중/종로/용산구",
+    src: "seoulmid",
     msg: "서울의 중심에서 맛보는 정통 디저트",
     img: "main_location_jonglo-middle.jpg"
 }, {
     id: 2,
     wide: "서울",
     basic: "마포/서대문구",
+    src: "seoulmidwest",
     msg: "서울 중서부의 정이 넘치는 디저트가게",
     img: "main_location_mapo.jpg"
 }, {
     id: 3,
     wide: "준비중",
     basic: "",
+    src: "none",
     msg: "더 많은 지역을 서비스하기 위해 준비중 입니다.",
     img: "preparing.png"
 }, ]
@@ -1227,9 +1242,45 @@ var userLikeList = [
 
 
 var ranking = [
+    /*{
+        id: 0,
+        shop: shopData.find(x => x.id === 0),
+        score: ""
+    },*/
+    /*
+     
+    */
     {
         id: 0,
         shop: shopData.find(x => x.id === 0),
-        score: 
+        score: 7
+    },{
+        id: 1,
+        shop: shopData.find(x => x.id === 1),
+        score: 8
+    },{
+        id: 2,
+        shop: shopData.find(x => x.id === 2),
+        score: 3
+    },{
+        id: 3,
+        shop: shopData.find(x => x.id === 3),
+        score: 9
+    },{
+        id: 4,
+        shop: shopData.find(x => x.id === 4),
+        score: 10
+    },{
+        id: 5,
+        shop: shopData.find(x => x.id === 5),
+        score: 5
+    },{
+        id: 6,
+        shop: shopData.find(x => x.id === 6),
+        score: 7
+    },{
+        id: 7,
+        shop: shopData.find(x => x.id === 7),
+        score: 4
     },
 ]

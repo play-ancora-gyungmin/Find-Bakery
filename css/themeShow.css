@@ -1,0 +1,90 @@
+@charset 'utf-8';
+/*main.css*/
+
+@import url(./core.css);
+@import url(./common.css);
+
+.theme-top {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background-image: url("../resorces/img/dummy1.jpg");*/
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px hsla(210, 6%, 33%, 0.45);
+    background-repeat: no-repeat;
+}
+
+.theme-titlebox {
+    position: relative;
+    height: 100%;
+}
+
+.pagesign {
+    position: absolute;
+    left: 36px;
+    top: 36px;
+    font-size: .36rem;
+    font-family: "BMJ";
+    color: #FFFFF0;
+}
+
+#theme-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: .62rem;
+    font-family: "BMJ";
+    color: #FFFFF0;
+}
+
+.themeinfo{
+    position: absolute;
+    left: 36px;
+    bottom: 36px;
+    font-size: .17rem;
+    color: #FFFFF0;
+}
+
+.theme-post {}
+
+.mainmsg {
+    margin-top: 90px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #EBEDED;
+    font-size: .32rem;
+}
+
+.themeItem {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+    float: none
+}
+
+.item-shop {
+    width: 60%;
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+}
+
+.item-msg {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    float: left;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.item-msg p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: .21rem;
+}

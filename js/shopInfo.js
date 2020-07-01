@@ -1,13 +1,6 @@
 /*shopInfo.js*/
 var pointX, pointY
 
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
 function findData(data, sid) {
     return data.thatData.find(x => x.id === sid)
 }
@@ -41,7 +34,7 @@ function findMapPoints(addr) {
         var result = response.v2.addresses
         pointX = result[0].x
         pointY = result[0].y
-        //console.log(pointX + "/" + pointY);
+        console.log(pointX + "/" + pointY);
 
         createMap(pointX, pointY)
     })
@@ -65,7 +58,7 @@ window.addEventListener("load", function () {
     })
 
     var shopInfoLoad = new Vue({
-        el: '#shopInfo',
+        el: '#pageInfo',
         data: {
             thatData: shopData,
             isLike: false

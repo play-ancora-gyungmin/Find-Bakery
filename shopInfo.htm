@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
     <script src="js/component.js"></script>
     <script src="js/read.js"></script>
-    <script src="js/calcSize.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/shopInfo.js"></script>
 </head>
 
@@ -21,7 +21,7 @@
     </header>
     <main id="main">
         <!--정보 전달 박스-->
-        <div id="shopInfo">
+        <div id="pageInfo">
             <section class="banner">
                 <div class="shop-top" id="shop-top" :style="{ backgroundImage: 'url(./resorces/img/' + findedData.img + ')' }">
                     <span class="ir">{{ findedData.title }} 전경 이미지</span>
@@ -107,7 +107,7 @@
                     <li class="itembox theme" v-for="item in findedData.review" :key="item.rid">
                         <div class="item-cont">
                             <div class="item-titlebox">
-                                <h3>@{{ item.user }}</h3>
+                                <h3>@{{ item.user.name }}</h3>
                                 <h4><b>{{ item.score }}</b>점</h4>
                             </div>
                             <p>{{ item.comment }}</p>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <title>오리크림빵</title>
+    <link rel="stylesheet" href="./css/themeShow.css">
+    <!--<script src="js/vue.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
+    <script src="js/component.js"></script>
+    <script src="js/read.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/themeShow.js"></script>
+</head>
+
+<body>
+    <header id="top">
+        <page-header></page-header>
+    </header>
+    <main>
+        <div id="pageInfo">
+            <section class="banner">
+                <div class="theme-top" id="theme-top" :style="{ backgroundImage: 'url(./resorces/img/' + findedData.img + ')' }">
+                    <div class="theme-titlebox content">
+                        <span class="pagesign">테마</span>
+                        <h2 id="theme-title">{{ findedData.title }}</h2>
+                        <span class="themeinfo">by{{ findedData.written }}/{{ findedData.reportingdate }}</span>
+                    </div>
+                </div>
+            </section>
+            <h3 class="mainmsg content">{{ findedData.msg }}</h3>
+        </div>
+        <section class="theme-post content">
+            <ul id="themeShopList">
+                <li class="themeItem" v-for="item in findedData.sellist">
+                    <div class="itembox item-shop">
+                        <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.shop.img + ')' }">
+                            <a class="ir" :href="'./shopInfo.htm?sid='+item.shop.id">{{ item.shop.title }}</a>
+                        </div>
+                        <div class="item-cont">
+                            <h3><a :href="'./shopInfo.htm?sid='+item.shop.id">{{ item.shop.title }}</a></h3>
+                            <p>{{ item.shop.msg }}</p>
+                        </div>
+                    </div>
+                    <div class="item-msg">
+                        <p>
+                           {{ item.shopmsg }}
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer id='info'>
+        <page-footer></page-footer>
+    </footer>
+</body></html>

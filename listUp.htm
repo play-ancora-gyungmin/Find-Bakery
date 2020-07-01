@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
     <script src="js/component.js"></script>
     <script src="js/read.js"></script>
-    <script src="js/calcSize.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/listUp.js"></script>
 </head>
 
@@ -21,72 +21,74 @@
     </header>
     <main id="main">
         <div id="pageTitle" class="content">
-            <!--<h2>빵집 목록</h2>
-            <h2>디저트 가게 목록</h2>
-            <h2>지역</h2>-->
-            <h2>검색결과</h2>
+            <h2>{{ title }}</h2>
         </div>
         <section id="rankingBox" class="content">
             <div class="section-topbox">
                 <h2 class="section-title">추천 가게</h2>
             </div>
-            <div class="ranking-list shop-box clearfix">
-                <div id="rank-1" class="itembox rankItem">
-                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+            <div class="ranking-list shop-box clearfix" id="ranking-list">
+                <div id="rank-1" class="itembox rankItem" >
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + rankedData[0].shop.img + ')' }">
                         <img src="./resorces/img/badge-1st.png" alt="1등 뱃지">
-                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}
+                        <span class="score">{{ rankedData[0].score }}<b>점</b></span>
+                        <a class="ir" :href="'./shopInfo.htm?sid='+rankedData[0].shop.id">{{ rankedData[0].shop.title }}
                         </a>
                     </div>
                     <div class="item-cont">
-                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
-                        <p>{{ item.msg }}</p>
+                        <h3><a :href="'./shopInfo.htm?sid='+rankedData[0].shop.id">{{ rankedData[0].shop.title }}</a></h3>
+                        <p>{{ rankedData[0].shop.msg }}</p>
                     </div>
                 </div>
                 <div id="rank-2" class="itembox rankItem">
-                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + rankedData[1].shop.img + ')' }">
                         <img src="./resorces/img/badge-2nd.png" alt="2등 뱃지">
-                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                        <a class="ir" :href="'./shopInfo.htm?sid='+rankedData[1].shop.id">{{ rankedData[1].shop.title }}</a>
+                        <span class="score">{{ rankedData[1].score }}<b>점</b></span>
                     </div>
                     <div class="item-cont">
-                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
-                        <p>{{ item.msg }}</p>
+                        <h3><a :href="'./shopInfo.htm?sid='+rankedData[1].shop.id">{{ rankedData[1].shop.title }}</a></h3>
+                        <p>{{ rankedData[1].shop.msg }}</p>
                     </div>
                 </div>
                 <div id="rank-3" class="itembox rankItem">
-                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + rankedData[2].shop.img + ')' }">
                         <img src="./resorces/img/badge-3rd.png" alt="3등 뱃지">
-                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                        <a class="ir" :href="'./shopInfo.htm?sid='+rankedData[2].shop.id">{{ rankedData[2].shop.title }}</a>
+                        <span class="score">{{ rankedData[2].score }}<b>점</b></span>
                     </div>
                     <div class="item-cont">
-                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
-                        <p>{{ item.msg }}</p>
+                        <h3><a :href="'./shopInfo.htm?sid='+rankedData[2].shop.id">{{ rankedData[2].shop.title }}</a></h3>
+                        <p>{{ rankedData[2].shop.msg }}</p>
                     </div>
                 </div>
                 <div id="rank-4" class="itembox rankItem">
-                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + rankedData[3].shop.img + ')' }">
                         <img src="./resorces/img/badge-4th.png" alt="4등 뱃지">
-                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                        <a class="ir" :href="'./shopInfo.htm?sid='+rankedData[3].shop.id">{{ rankedData[3].shop.title }}</a>
+                        <span class="score">{{ rankedData[3].score }}<b>점</b></span>
                     </div>
                     <div class="item-cont">
-                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
-                        <p>{{ item.msg }}</p>
+                        <h3><a :href="'./shopInfo.htm?sid='+rankedData[3].shop.id">{{ rankedData[3].shop.title }}</a></h3>
+                        <p>{{ rankedData[3].shop.msg }}</p>
                     </div>
                 </div>
                 <div id="rank-5" class="itembox rankItem">
-                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
+                    <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + rankedData[4].shop.img + ')' }">
                         <img src="./resorces/img/badge-5th.png" alt="5등 뱃지">
-                        <a class="ir" :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a>
+                        <a class="ir" :href="'./shopInfo.htm?sid='+rankedData[4].shop.id">{{ rankedData[4].shop.title }}</a>
+                        <span class="score">{{ rankedData[4].score }}<b>점</b></span>
                     </div>
                     <div class="item-cont">
-                        <h3><a :href="'./shopInfo.htm?sid='+item.id">{{ item.title }}</a></h3>
-                        <p>{{ item.msg }}</p>
+                        <h3><a :href="'./shopInfo.htm?sid='+rankedData[4].shop.id">{{ rankedData[4].shop.title }}</a></h3>
+                        <p>{{ rankedData[4].shop.msg }}</p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="shopListBox" class="content">
             <ul id="shopList" class="section-mainlist shop-box">
-                <li class="itembox" v-for="item in thatData" :key="item.id">
+                <li class="itembox" v-for="item in filteredData" :key="item.id">
                     <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
                         <a class="ir" href="#">{{ item.title }}</a>
                     </div>

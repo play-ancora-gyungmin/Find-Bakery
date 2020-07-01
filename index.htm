@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/component.js"></script>
     <script src="js/read.js"></script>
-    <script src="js/calcSize.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -30,7 +30,7 @@
                 <a class="next arow baner-btn" href="#">&gt;</a>
             </div>
         </section>
-        <!--<section class="section-box list-theme content">
+        <section class="section-box list-theme content">
             <div class="section-topbox">
                 <h2 class="section-title">테마</h2>
             </div>
@@ -38,17 +38,17 @@
                 <ul class="section-mainlist theme-box" id="theme-box" :style="{ width: thatWidth + 'px' }">
                     <li class="itembox theme" v-for="item in thatData" :key="item.id">
                         <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
-                            <a class="ir" href="#">{{ item.title }}</a>
+                            <a class="ir" :href="'./themeShow.htm?tid='+item.id">{{ item.title }}</a>
                         </div>
                         <div class="item-cont">
-                            <h3><a href="#">{{ item.title }}</a></h3>
+                            <h3><a :href="'./themeShow.htm?tid='+item.id">{{ item.title }}</a></h3>
                             <p>{{ item.msg }}</p>
                             <span class="item-time">{{ item.time }}</span>
                         </div>
                     </li>
                 </ul>
             </div>
-        </section>-->
+        </section>
         <section class="section-box list-local content">
             <div class="section-topbox">
                 <h2 class="section-title">지역</h2>
@@ -57,10 +57,10 @@
                 <ul class="section-mainlist local-box" id="local-box" :style="{ width: thatWidth + 'px' }">
                     <li class="itembox" v-for="item in thatData" :key="item.id">
                         <div class="item-img" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }">
-                            <a class="ir" href="#">{{ item.wide }} {{ item.basic }}</a>
+                            <a class="ir" :href="'./listUp.htm?lid=lc&lc='+ item.src">{{ item.wide }} {{ item.basic }}</a>
                         </div>
                         <div class="item-cont">
-                            <h3><a href="#">{{ item.wide }} {{ item.basic }}</a></h3>
+                            <h3><a :href="'./listUp.htm?lid=lc&lc='+ item.src">{{ item.wide }} {{ item.basic }}</a></h3>
                             <p>{{ item.msg }}</p>
                         </div>
                     </li>
