@@ -22,8 +22,8 @@
 
 .pagesign {
     position: absolute;
-    left: 36px;
-    top: 36px;
+    left: 1%;
+    top: 4%;
     font-size: .36rem;
     font-family: "BMJ";
     color: #FFFFF0;
@@ -43,8 +43,8 @@
 
 .themeinfo{
     position: absolute;
-    left: 36px;
-    bottom: 36px;
+    left: 1%;
+    bottom: 4%;
     font-size: .17rem;
     color: #FFFFF0;
 }
@@ -60,7 +60,8 @@
 }
 
 .themeItem {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     height: 350px;
     margin-bottom: 30px;
     float: none
