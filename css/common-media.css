@@ -1,0 +1,136 @@
+@media only screen and (max-width:1200px) {
+    #top {
+        overflow: hidden;
+        transition: .3s
+    }
+    
+    #top.on {
+        height: 320px;
+    }
+    
+    #gnb {
+        height: calc( 160px * 2 );
+    }
+    
+    #media-gnb-btn {
+        display: block;
+    }
+    
+    #gnb-logo {
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .gnb-list {
+        position: absolute;
+        width: 80%;
+        top: 240px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    #info {
+        height: 320px;
+    }
+    
+    .info-top {
+        height: 220px;
+    }
+    
+    #info-logo {
+        top: 40%;
+    }
+    
+    .sns-list {
+        top: 40%;
+        transform: translateY(-50%);
+    }
+    
+    .info-list {
+        position: absolute;
+        top: 80%;
+    }
+}
+
+@media only screen and (max-width:870px) {
+    #top.on {
+        height: 480px;
+    }
+    
+    #gnb-logo span {
+        display: none;
+    }
+    
+    #gnb {
+        height: calc( 160px * 3 );
+    }
+    
+    .gnb-list{
+        top: 320px;
+    }
+    
+    .gnb-list li{
+        float: none;
+        margin: 20px 0;
+    }
+    
+    .gnb-list li a{
+        font-size: .27rem;
+    }
+    
+    .gnb-search {
+        width: 100%;
+    }
+    
+    .content {
+        width: 95%;
+    }
+    
+    #review-form {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    #info {
+        height: 420px;
+    }
+    
+    .info-top {
+        height: 320px;
+    }
+    
+    #info-logo {
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .sns-list {
+        right: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .sns-list h4 {
+        float: none;
+        text-align: center;
+        margin: 0
+    }
+    
+    .info-list {
+        position: absolute;
+        width: 100%;
+        top: 90%;
+    }
+    
+    #shop-map {
+        height: calc( 485px * 1.5 )
+    }
+    
+    #mapbox {
+        width: 100%;
+    }
+}

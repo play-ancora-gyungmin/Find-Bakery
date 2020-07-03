@@ -3,24 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <meta name="viewport" content="width=device-width, initial-scale=.7">
     <title>오리크림빵</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/signInUp.css">
+    <link rel="stylesheet" href="./css/common-media.css">
     <!--<script src="js/vue.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/component.js"></script>
     <script src="js/read.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/signIn.js"></script>
 </head>
 
 <body>
-    <header id="top">
+    <header id="top" :class="{ on:isActive }">
         <page-header></page-header>
     </header>
     <main id="main">
         <div class="contain content">
-            <h2>로그인</h2>
+            <h2 class="title">로그인</h2>
+            <aside id="signin" class="sign">
+                <form id="signin-form" method="post" action="signIn.php">
+                    <div class="userId userInput">
+                        <label for="userId">이메일</label>
+                        <input type="text" name="userId" id="userId" maxlength="40" placeholder="이메일">
+                    </div>
+                    <div class="userPassword userInput">
+                        <label for="userPassword">암호</label>
+                        <input type="password" name="userPassword" id="userPassword" maxlength="40" placeholder="암호">
+                    </div>
+                    <div class="more">
+                        <!--<a href="#">아이디 찾기</a> |
+                        <a href="#">패스워드 찾기</a> |-->
+                        <a href="#">회원가입</a>
+                    </div>
+                    <div class="userSigninBtn">
+                        <input type="submit" id="userSigninBtn" value="로그인">
+                    </div>
+                </form>
+            </aside>
         </div>
     </main>
     <footer id='info'>

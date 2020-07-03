@@ -18,7 +18,7 @@
 #shop-head {
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 15%;
     transform: translateX(-50%);
     width: 90%;
 }
@@ -43,6 +43,7 @@
 .like_review {
     position: absolute;
     right: 0;
+    bottom: -110%;
 }
 
 .like_review a {
@@ -235,8 +236,8 @@
 
 #review-form {
     position: absolute;
-    width: 30%;
-    height: 300px;
+    width: 40%;
+    height: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -252,8 +253,10 @@
     position: absolute;
     top: 5px;
     right: 15px;
-    font-size: .16rem;
+    font-size: .37rem;
+    font-family: 'BMJ';
     float: left;
+    z-index: 999;
 }
 
 .reviewTopBox {
@@ -261,7 +264,7 @@
     height: 30%;
     width: 90%;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 70px;
     font-size: .16rem;
     box-sizing: border-box;
     line-height: 50px;
@@ -278,8 +281,8 @@
 }
 
 #reviewScoreInput {
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
     border: 2px solid #E7660B;
     border-radius: 7px;
     background-color: #FFFFF0;

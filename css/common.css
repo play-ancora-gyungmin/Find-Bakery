@@ -6,9 +6,20 @@ body {
     overflow-x: hidden;
 }
 
-.clearfix {*zoom:1;}
-.clearfix:before, .clearfix:after {display:block; content: ''; line-height: 0;}
-.clearfix:after {clear: both;}
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: block;
+    content: '';
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
 
 .content {
     width: 90%;
@@ -176,6 +187,7 @@ body {
 }
 
 #top {
+    position: relative;
     width: 100%;
     height: 160px;
     background-color: #FCE364;
@@ -189,7 +201,7 @@ body {
 }
 
 #gnb-logo {
-    top: 50%;
+    top: 80px;
     transform: translateY(-50%);
     float: left;
     margin-right: 30px;
@@ -262,7 +274,7 @@ body {
 .sign-list {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 80px;
     transform: translateY(-50%);
     font-size: .18rem;
     color: #E7660B;
@@ -275,6 +287,52 @@ body {
 
 .sign-list a {
     color: #E7660B;
+}
+
+#media-gnb-btn {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 45px;
+    /*outline: 1px solid blue;*/
+    display: none;
+}
+
+#media-gnb-btn span {
+    position: absolute;
+    width: 100%;
+    height: calc(100% / 5);
+    background-color: #E7660B;
+    transition: .3s;
+}
+
+#media-gnb-btn .bar-top {
+    top: 0;
+}
+
+#media-gnb-btn .bar-mid {
+    width: 70%;
+    top: 18px;
+}
+
+#media-gnb-btn .bar-bot {
+    top: 36px;
+}
+
+#top.on #media-gnb-btn .bar-top {
+    top: 18px;
+    transform: rotate(-45deg);
+}
+
+#top.on #media-gnb-btn .bar-mid {
+    width: 0%;
+}
+
+#top.on #media-gnb-btn .bar-bot {
+    top: 18px;
+    transform: rotate(45deg);
 }
 
 
@@ -346,6 +404,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+
+.sns-list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .sns-fb {

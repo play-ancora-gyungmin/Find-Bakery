@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <meta name="viewport" content="width=device-width, initial-scale=.7">
     <title>오리크림빵</title>
     <link rel="stylesheet" href="./css/shopInfo.css">
+    <link rel="stylesheet" href="./css/common-media.css">
     <!--<script src="js/vue.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=if39vlv1q4&submodules=geocoder"></script>
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    <header id="top">
+    <header id="top" :class="{ on:isActive }">
         <page-header></page-header>
     </header>
     <main id="main">

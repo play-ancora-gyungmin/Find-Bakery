@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=.5">
+    <meta name="viewport" content="width=device-width, initial-scale=.7">
     <title>오리크림빵</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/common-media.css">
     <!--<script src="js/vue.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/component.js"></script>
@@ -14,7 +16,7 @@
 </head>
 
 <body>
-    <header id="top">
+    <header id="top" :class="{ on:isActive }"> 
         <page-header></page-header>
     </header>
     <main id="main">
