@@ -22,11 +22,11 @@
     font-size: .24rem;
 }
 
-label {
+.input-label {
     display: block;
     margin-top: 20px;
     margin-bottom: 15px;
-    font-size: .24rem;
+    font-size: .21rem;
     font-weight: bold;
     color: #E88946;
 }
@@ -41,7 +41,7 @@ label {
     border-radius: 7px;
     margin: 0;
     padding: 10px;
-    font-size: .21rem;
+    font-size: .18rem;
     box-sizing: border-box;
 }
 
@@ -53,30 +53,22 @@ select:focus{
 .more {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: .21rem;
+    font-size: .18rem;
     color: #E88946;
 }
 .more a {
-    font-size: .21rem;
+    font-size: .18rem;
     color: #E88946;
 }
 
-.sign span {
+.userGender label {
     color: #6a6a6a;
+    font-size: .18rem;
 }
 
 .sign input[type="submit"],
 .sign input[type="buttom"] {
-    position: absolute;
-    right: 0; 
-    width: 250px;
-    height: 65px;
-    border: none;
-    border-radius: 7px;
-    background-color: #FCF695;
-    font-size: .24rem;
-    font-weight: bold;
-    color: #E88946;
+    bottom: auto;
 }
 
 .agreeChk {
@@ -84,7 +76,7 @@ select:focus{
 }
 
 .agreeText {
-    font-size: .17rem;
+    font-size: .18rem;
 }
 
 .agreeText a {

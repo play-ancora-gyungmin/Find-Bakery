@@ -1,0 +1,15 @@
+<svg id="Checkbox_on" data-name="Checkbox on" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e7660b;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Checkbox" class="cls-1" width="16" height="16" rx="3"/>
+  <path id="icon" class="cls-2" d="M5,6a.908.908,0,0,1-.7-.3l-2-2a.967.967,0,0,1,0-1.4.967.967,0,0,1,1.4,0L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z" transform="translate(2 5)"/>
+</svg>

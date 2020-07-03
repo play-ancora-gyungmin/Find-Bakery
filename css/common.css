@@ -227,6 +227,7 @@ body {
     width: 350px;
     height: 45px;
     padding-left: 10%;
+    background-color: #fffff0;
     border-color: #E7660B;
     border-style: solid;
     border-radius: 22.5px;
@@ -237,6 +238,7 @@ body {
 .gnb-search input {
     height: 100%;
     width: 90%;
+    font-size: .16rem;
     border: none;
     background-color: transparent;
     box-sizing: border-box;

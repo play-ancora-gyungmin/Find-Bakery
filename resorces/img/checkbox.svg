@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        stroke: #ebeded;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="16" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="Checkbox" class="cls-2">
+    <g id="Checkbox-2" data-name="Checkbox" class="cls-3">
+      <rect class="cls-4" width="16" height="16" rx="3"/>
+      <rect class="cls-1" x="1" y="1" width="14" height="14" rx="2"/>
+    </g>
+  </g>
+</svg>

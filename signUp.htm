@@ -24,29 +24,29 @@
             <aside id="signUp" class="sign">
                 <form action="signUp.php" method="post">
                     <div class="userInput">
-                        <label for="userEmail">이메일</label>
+                        <label for="userEmail" class="input-label">이메일</label>
                         <input type="email" id="userEmail" name="userEmail" placeholder="이메일 입력" autofocus pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     </div>
                     <div class="userInput">
-                        <label for="userPassword">암호</label>
+                        <label for="userPassword" class="input-label">암호</label>
                         <input type="password" id="userPassword" name="userPassword" maxlength="40" placeholder="암호 입력" pattern=".{8,39}" required>
                     </div>
                     <div class="userInput">
-                        <label for="userPasswordChk">암호 확인</label>
+                        <label for="userPasswordChk" class="input-label">암호 확인</label>
                         <input type="password" id="userPasswordChk" name="userPasswordChk" maxlength="40" placeholder="암호 다시 입력" pattern=".{8,39}" required>
                     </div>
                     <div class="userInput">
-                        <label for="userName">이름</label>
+                        <label for="userName" class="input-label">이름</label>
                         <input type="text" id="userName" name="userName" maxlength="40" placeholder="이름 입력" required>
                     </div>
-                    <div class="userInput">
-                        <label for="userGender">성별</label>
-                        <span>미설정</span><input type="radio" id="none" name="userGender" checked>
-                        <span>남성</span><input type="radio" id="male" name="userGender">
-                        <span>여성</span><input type="radio" id="female" name="userGender">
+                    <div class="userInput userGender">
+                        <span class="input-label">성별</span>
+                        <label for="none">미설정</label><input type="radio" id="none" name="userGender" checked>
+                        <label for="male">남성</label><input type="radio" id="male" name="userGender">
+                        <label for="female">여성</label><input type="radio" id="female" name="userGender">
                     </div>
                     <div class="userInput">
-                        <label for="userAge">나이대</label>
+                        <label for="userAge" class="input-label">나이대</label>
                         <select name="userAge" id="userAge">
                             <option value="">선택</option>
                             <option value="10">10대 이하</option>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="userInput" class="agreeChk">
                         <input type="checkbox" id="agreeChk">
-                        <label for="agreeChk" class="agreeText"><a href="#">개인정보 처리 방침</a> 및 <a href="#">이용약관</a>에 동의합니다.</label>
+                        <label for="agreeChk" class="agreeText input-label"><a href="#">개인정보 처리 방침</a> 및 <a href="#">이용약관</a>에 동의합니다.</label>
                     </div>
                     <div>
                         <input type="submit" id="userSignupBtn" value="회원가입">

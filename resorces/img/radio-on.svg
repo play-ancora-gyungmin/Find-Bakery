@@ -1,0 +1,15 @@
+<svg id="radio_on" data-name="radio on" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e7660b;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Checkbox" class="cls-1" width="16" height="16" rx="8"/>
+  <rect id="Checkbox-2" data-name="Checkbox" class="cls-2" width="4" height="4" rx="2" transform="translate(6 6)"/>
+</svg>
