@@ -237,7 +237,7 @@
 #review-form {
     position: absolute;
     width: 60%;
-    height: 45%;
+    height: 55%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -262,7 +262,7 @@
 
 .reviewTopBox {
     position: relative;
-    height: 25%;
+    height: 30%;
     width: 90%;
     margin: 0 auto;
     padding-top: 70px;
@@ -305,7 +305,7 @@
 }
 
 .reviewTextInput {
-    height: 60%;
+    height: 70%;
 }
 
 #reviewTextInput {
@@ -326,5 +326,7 @@
 }
 
 #review-submit {
-    bottom: 30px;
+    bottom: 15px;
+    width: 150px;
+    height: 50px;
 }
