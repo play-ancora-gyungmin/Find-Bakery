@@ -10,8 +10,8 @@ var gnb = '<nav id="gnb" class="gnb content">' +
     '</nav>'
 
 var info = '<div>' +
-    '<section class="info-top content">' +
-
+    '<section class="info-top content"><h6 class="section-title ir notshow">하단메뉴</h6>' +
+    
     '<div id="info-logo" class="logo"><a href="#"><img src="./resorces/img/Logo.png" alt="오리크림빵 로고"><span>오리크림빵</span></a></div>' +
 
     '<ul class="info-list"><li><a href="#">회사소개</a></li><li><a href="#">공지사항</a></li><li><a href="#">이용약관</a></li><li><a href="#">개인정보처리방침</a></li><li><a href="#">가게지원센터</a></li><li><a href="#">고객센터</a></li></ul>' +
@@ -23,7 +23,7 @@ var info = '<div>' +
     '</section>' +
 
     '<section class="info-bottom content">' +
-    '<span>(C)2020. 오리크림빵</span>' +
+    '<h6>(C)2020. 오리크림빵</h6>' +
     '</section>' +
     '</div>'
 

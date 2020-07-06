@@ -6,8 +6,9 @@ body {
     overflow-x: hidden;
 }
 
-.clearfix {
-    *zoom: 1;
+.notshow{
+    width: 0;
+    height: 0;
 }
 
 .clearfix:before,

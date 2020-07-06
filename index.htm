@@ -21,6 +21,7 @@
     </header>
     <main id="main">
         <section class="banner">
+            <h2 class="section-title ir notshow">배너</h2>
             <ul class="banner-list" id="main-banner-list">
                 <li v-for="item in thatData" :key="item.id" :style="{ backgroundImage: 'url(./resorces/img/' + item.img + ')' }"><a href="#">{{ item.title }}</a></li>
             </ul>
