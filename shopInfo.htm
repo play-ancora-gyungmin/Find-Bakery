@@ -122,21 +122,19 @@
             <div class="section-topbox">
                 <h2 class="section-title">지도</h2>
             </div>
-            <div class="section-mainbox">
-                <div id="mapbox" class="ir">
-                    지도 {{ findedData.address }}
-                </div>
-                <div id="transitbox">
-                    <h3>대중교통</h3>
-                    <h4>버스</h4>
-                    <ul id="busList">
-                        <li v-for="item in findedData.transit.bus">{{ item }}</li>
-                    </ul><br>
-                    <h4>지하철</h4>
-                    <ul id="metroList">
-                        <li v-for="item in findedData.transit.metro">{{ item }}</li>
-                    </ul>
-                </div>
+            <div id="mapbox" class="ir">
+                지도 {{ findedData.address }}
+            </div>
+            <div id="transitbox">
+                <h3>대중교통</h3>
+                <h4>버스</h4>
+                <ul id="busList">
+                    <li v-for="item in findedData.transit.bus">{{ item }}</li>
+                </ul><br>
+                <h4>지하철</h4>
+                <ul id="metroList">
+                    <li v-for="item in findedData.transit.metro">{{ item }}</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -179,4 +177,6 @@
             </div>
         </transition>
     </div>
-</body></html>
+</body>
+
+</html>
