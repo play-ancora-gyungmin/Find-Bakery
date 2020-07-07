@@ -144,9 +144,9 @@
     <!--리뷰 업로드 폼-->
     <div id="rvf-wrap">
         <transition name="fade">
-            <div class="review-form" v-show="isActive">
-                <form action="reviewPost.php" id="review-form">
-                    <a href="#" id="close-rvf" v-on:click="closeForm">x</a>
+            <div class="review-form popup" v-show="isActive">
+                <form action="reviewPost.php" id="review-form" class="popup-view">
+                    <a href="#" class="close-x-btn" v-on:click="closeForm">x</a>
                     <div class="reviewTopBox">
                         <h3 class="user-name">@율</h3>
                         <div class="reviewScoreInput">

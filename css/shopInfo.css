@@ -214,50 +214,9 @@
     margin-top: .20rem;
 }
 
-.review-form {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    background-color: rgba(255, 255, 240, 0.5);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .5s;
-}
-
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
-}
-
-#review-form {
-    position: absolute;
-    width: 650px;
-    height: 550px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    border-radius: 7px;
-}
-
 #review-form label {
     font-size: .18rem;
     margin-right: 5px;
-}
-
-#close-rvf {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: .37rem;
-    font-family: 'BMJ';
-    float: left;
-    z-index: 999;
 }
 
 .reviewTopBox {

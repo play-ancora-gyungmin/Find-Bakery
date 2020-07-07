@@ -89,3 +89,21 @@ select:focus{
     float: left;
     vertical-align: 5px;
 }
+
+.popup-title{
+    font-size: .3rem;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.popup-text{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    overflow-y: scroll;
+    font-size: .16rem;
+    box-sizing: border-box;
+}
